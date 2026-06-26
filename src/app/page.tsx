@@ -1,10 +1,39 @@
 import "./page.scss";
+import "./components.scss";
 
 export default function Home() {
   return (
     <div className={"container"}>
       <header className="header">
-        Header part
+        <img src="/img/logo.png" alt="logo" className="logo" />
+        <form action="#" className="search">
+          <input type="text" className="searchInput" placeholder="Search hotels" />
+          <button className="searchButton">
+            <svg className="searchIcon">
+              <use xlinkHref="img/sprite.svg#icon-magnifying-glass" />
+            </svg>
+          </button>
+          <nav className="userNav">
+            <div className="userNavIconBox">
+              <svg className="userNavIcon">
+                <use xlinkHref="img/sprite.svg#icon-bookmark" />
+              </svg>
+              <span className="userNavNotification">7</span>
+            </div>
+
+            <div className="userNavIconBox">
+              <svg className="userNavIcon">
+                <use xlinkHref="img/sprite.svg#icon-chat" />
+                <span className="userNavNotification">13</span>
+              </svg>
+            </div>
+
+            <div className="userNavUser">
+              <img src="img/user.jpg" alt="User photo" className="userNavUserPhoto" />
+              <span className="userNavUserName">Jonas</span>
+            </div>
+          </nav>
+        </form>
       </header>
       <div className="content">
         <nav className="sidebar">
