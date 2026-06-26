@@ -13,27 +13,27 @@ export default function Home() {
               <use xlinkHref="img/sprite.svg#icon-magnifying-glass" />
             </svg>
           </button>
-          <nav className="userNav">
-            <div className="userNavIconBox">
-              <svg className="userNavIcon">
-                <use xlinkHref="img/sprite.svg#icon-bookmark" />
-              </svg>
-              <span className="userNavNotification">7</span>
-            </div>
-
-            <div className="userNavIconBox">
-              <svg className="userNavIcon">
-                <use xlinkHref="img/sprite.svg#icon-chat" />
-                <span className="userNavNotification">13</span>
-              </svg>
-            </div>
-
-            <div className="userNavUser">
-              <img src="img/user.jpg" alt="User photo" className="userNavUserPhoto" />
-              <span className="userNavUserName">Jonas</span>
-            </div>
-          </nav>
         </form>
+        <nav className="userNav">
+          <div className="userNavIconBox">
+            <svg className="userNavIcon">
+              <use xlinkHref="img/sprite.svg#icon-bookmark" />
+            </svg>
+            <span className="userNavNotification">7</span>
+          </div>
+
+          <div className="userNavIconBox">
+            <svg className="userNavIcon">
+              <use xlinkHref="img/sprite.svg#icon-chat" />
+            </svg>
+            <span className="userNavNotification">13</span>
+          </div>
+
+          <div className="userNavUser">
+            <img src="img/user.jpg" alt="User photo" className="userNavUserPhoto" />
+            <span className="userNavUserName">Jonas</span>
+          </div>
+        </nav>
       </header>
       <div className="content">
         <nav className="sidebar">

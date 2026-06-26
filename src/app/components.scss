@@ -3,6 +3,7 @@
 
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 ///////////////////////////////////////////
@@ -10,18 +11,59 @@
 
 .search {
 
-    &Input {
+    flex: 0 0 40%;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        color: inherit;
+        padding: 0.7rem 2rem;
+        border-radius: 200px;
+        width: 90%;
+        transition: all 0.2s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &Input:focus + &Button {
+        background-color: var(--color-grey-light-3);
     }
 
     &Button {
+        border: none;
+        background-color: var(--color-grey-light-2);
 
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
     }
 
     &Icon {
 
         height: 2rem;
         width: 2rem;
+
+        fill: var(--color-grey-dark-3);
     }
 }
 
@@ -31,6 +73,8 @@
 /// USER NAVIGATION
 
 .userNav {
+
+    background-color: greenyellow;
     &IconBox {
 
     }
