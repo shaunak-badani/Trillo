@@ -28,11 +28,19 @@
     // The property we should use for defining the width is the flex basis property
     // flex shorthand: flex-grow flex-shrink flex-basis
     flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
+
+    // TEST
     background-color: orangered;
     // below code is flex-grow: 1
     flex: 1;
+
+    height: 80rem;
 }

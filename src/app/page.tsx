@@ -37,7 +37,43 @@ export default function Home() {
       </header>
       <div className="content">
         <nav className="sidebar">
-          Navigation
+          <ul className="sideNav">
+            <li className="sideNavItem">
+              <a href="#" className="sideNavLink">
+                <svg className="sideNavIcon">
+                  <use xlinkHref="img/sprite.svg#icon-home"></use>
+                </svg>
+                <span>Hotel</span>
+              </a>
+            </li>
+            <li className="sideNavItem">
+              <a href="#" className="sideNavLink">
+                <svg className="sideNavIcon">
+                  <use xlinkHref="img/sprite.svg#icon-aircraft-take-off"></use>
+                </svg>
+                <span>Flight</span>
+              </a>
+            </li>
+            <li className="sideNavItem">
+              <a href="#" className="sideNavLink">
+                <svg className="sideNavIcon">
+                  <use xlinkHref="img/sprite.svg#icon-key"></use>
+                </svg>
+                <span>Car rental</span>
+              </a>
+            </li>
+            <li className="sideNavItem">
+              <a href="#" className="sideNavLink">
+                <svg className="sideNavIcon">
+                  <use xlinkHref="img/sprite.svg#icon-map"></use>
+                </svg>
+                <span>Tours</span>
+              </a>
+            </li>
+          </ul>
+          <div className="legal">
+            &copy; 2017 by trillo. All rights reserved.
+          </div>
         </nav>
         <main className="hotel-view">
           Hotel View
