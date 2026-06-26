@@ -3,7 +3,7 @@
 
 .logo {
     height: 3.25rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 ///////////////////////////////////////////
@@ -74,30 +74,56 @@
 
 .userNav {
 
-    background-color: greenyellow;
-    &IconBox {
+    align-self: stretch;
 
+    display: flex;
+    align-items: center;
+
+    // hover with grey box on all children
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
+    }
+
+    &IconBox {
+        position: relative;
     }
 
     &Icon {
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
     }
 
     &Notification {
+        font-size: 0.8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: white;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
 
-    }
-
-    &User {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &UserPhoto {
         
         height: 3.75rem;
         border-radius: 50%;
-    }
 
-    &UserName {
-
+        margin-right: 1rem;
     }
 }
