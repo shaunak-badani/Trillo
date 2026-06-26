@@ -1,5 +1,6 @@
 import "./page.scss";
 import "./components.scss";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -38,13 +39,13 @@ export default function Home() {
       <div className="content">
         <nav className="sidebar">
           <ul className="sideNav">
-            <li className="sideNavItem">
-              <a href="#" className="sideNavLink">
+            <li className="sideNavItem sideNavItemActive">
+              <Link href="/hotel" className="sideNavLink">
                 <svg className="sideNavIcon">
                   <use xlinkHref="img/sprite.svg#icon-home"></use>
                 </svg>
                 <span>Hotel</span>
-              </a>
+              </Link>
             </li>
             <li className="sideNavItem">
               <a href="#" className="sideNavLink">
