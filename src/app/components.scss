@@ -204,3 +204,60 @@
     padding: 2.5rem;
     color: var(--color-grey-light-4);
 }
+
+//////////////////  
+/// GALLERY
+
+.gallery {
+
+    display: flex;
+
+    &Photo {
+        width: 100%;
+
+        // to get rid of the white line that appears underneath the image...?
+        display: block;
+    }
+}
+
+
+//////////////////  
+/// HOTEL OVERVIEW
+
+.overview {
+    display: flex;
+
+    &Heading {
+
+    }
+
+    &Stars {
+        
+        // margin right auto tells css that the element should occupy the entire width
+        // but the content only takes up the amount of space it needs
+        margin-right: auto;
+    }
+
+    &IconStar, &IconLocation {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &Location {
+    }
+
+    &Rating {
+
+    }
+
+    &RatingAverage {
+
+    }
+
+    &RatingCount {
+
+    }
+
+
+}

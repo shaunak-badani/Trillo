@@ -77,7 +77,49 @@ export default function Home() {
           </div>
         </nav>
         <main className="hotel-view">
-          Hotel View
+          <div className="gallery">
+            <figure className="galleryItem">
+              <img src="img/hotel-1.jpg" alt="Photo of hotel 1" className="galleryPhoto" />
+            </figure>
+            <figure className="galleryItem">
+              <img src="img/hotel-2.jpg" alt="Photo of hotel 1" className="galleryPhoto" />
+            </figure>
+            <figure className="galleryItem">
+              <img src="img/hotel-3.jpg" alt="Photo of hotel 1" className="galleryPhoto" />
+            </figure>
+          </div>
+          <div className="overview">
+            <h1 className="overviewHeading">Hotel Las Pasmas</h1>
+            <div className="overviewStars">
+              <svg className="overviewIconStar">
+                <use xlinkHref="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg className="overviewIconStar">
+                <use xlinkHref="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg className="overviewIconStar">
+                <use xlinkHref="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg className="overviewIconStar">
+                <use xlinkHref="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg className="overviewIconStar">
+                <use xlinkHref="img/sprite.svg#icon-star"></use>
+              </svg>
+            </div>
+            <div className="overviewLocation">
+              <svg className="overviewIconLocation">
+                <use xlinkHref="img/sprite.svg#icon-location-pin"></use>
+              </svg>
+              <button className="btnInline">
+                Albufeira, Portugal
+              </button>
+            </div>
+            <div className="overviewRating">
+              <div className="overviewRatingAverage">8.6</div>
+              <div className="overviewRatingCount">429 votes</div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
