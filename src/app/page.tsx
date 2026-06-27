@@ -186,6 +186,14 @@ export default function Home() {
               </button>
             </div>
           </div>
+          
+          <div className="cta">
+            <h2 className="ctaBookNow">Good news! We have 4 free rooms for your selected dates!</h2>
+            <button className="btn">
+              <span className="btnVisible">Book Now</span>
+              <span className="btnHidden">Only 4 rooms left</span>
+            </button>
+          </div>
         </main>
       </div>
     </div>
