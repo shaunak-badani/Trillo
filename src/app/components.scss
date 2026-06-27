@@ -226,7 +226,7 @@
 
 .overview {
     display: flex;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
     align-items: center;
 
     &Heading {
@@ -303,8 +303,17 @@
 
     transition: all 0.2s;
 
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
     &:hover {
         color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        }
     }
     
     &:focus {
@@ -328,5 +337,154 @@
     100% {
         transform: scale(1);
         box-shadow: none;
+    }
+}
+
+
+//////////////////  
+/// PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+//////////////////  
+/// LIST
+
+.list {
+    margin: 3rem 0;
+    list-style: none;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+
+    &Item {
+        flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+    }
+
+    &Item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.7rem;
+
+        // Older browsers
+        // background-image: url('/SVG/chevron-thin-right.svg');
+        // background-size: cover;
+
+        // newer browser - masks
+        background-color: var(--color-primary);
+        -webkit-mask-image: url('/SVG/chevron-thin-right.svg');
+        -webkit-mask-size: cover;
+
+        mask-image: url('/SVG/chevron-thin-right.svg');
+        mask-size: cover;
+    }
+}
+
+
+//////////////////  
+/// RECOMMEND
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
+    
+    &Count {
+        margin-right: auto;
+    }
+
+    &Friends {
+    }
+    
+    &Photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-of-type) {
+            margin-right: -1.15rem;
+        }
+    }
+}
+
+
+//////////////////  
+/// REVIEWS
+
+.review {
+
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &Text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+    
+    &User {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &Box {
+            margin-right: auto;
+        }
+
+        &Name {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        &Date {
+            font-size: 1rem;
+            color: var(--color-grey-dark-3);
+        }
+    }
+
+    &Photo {
+        height: 4.5rem;
+        width: auto;
+        border-radius: 50%;
+        margin-right: 1.2rem;
+    }
+
+    &Rating {
+        
+        // display: flex;
+        // align-items: center;
+        color: var(--color-primary);
+        font-size: 2.2rem;
+        font-weight: 300;
+
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        line-height: 1;
+        z-index: 1;
+
     }
 }
