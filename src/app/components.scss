@@ -1,3 +1,4 @@
+@use "./globals.scss" as *;
 ///////////////////////////////////////////
 /// LOGO
 
@@ -139,11 +140,24 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &Item {
         position:relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -183,6 +197,11 @@
         // z index didnt work without position specified
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &Icon {
@@ -203,6 +222,10 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-grey-light-4);
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 //////////////////  
@@ -402,6 +425,7 @@
     }
 
     &Friends {
+        display: flex;
     }
     
     &Photo {
@@ -412,7 +436,7 @@
         border: 3px solid #fff;
 
         &:not(:last-of-type) {
-            margin-right: -1.15rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -502,6 +526,11 @@
         font-size: 2rem;
         font-weight: 300;
         margin-bottom: 2.5rem;
+    }
+
+    
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
     }
 }
 
